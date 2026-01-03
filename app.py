@@ -41,7 +41,7 @@ colA, colB = st.columns(2)
 
 with colA:
     if st.button("Predict Problem Class"):
-        if not (desc.strip() or inp_desc.strip() or out_desc.strip() or sample_io.strip()):
+        if not (desc.strip() or inp_desc.strip() or out_desc.strip() :
             st.warning("Please enter at least one text field.")
             st.stop()
 
@@ -59,7 +59,7 @@ with colA:
 
 with colB:
     if st.button("Predict Problem Score"):
-        if not (desc.strip() or inp_desc.strip() or out_desc.strip() or sample_io.strip()):
+        if not (desc.strip() or inp_desc.strip() or out_desc.strip() :
             st.warning("Please enter at least one text field.")
             st.stop()
 
