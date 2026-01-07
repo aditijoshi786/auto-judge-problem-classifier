@@ -9,23 +9,35 @@ def load_models():
     return clf, reg
 classifier, regressor = load_models()
 def preprocess_input(desc, inp_desc, out_desc, sample_io):
-    raw_text = (desc + " " +inp_desc + " " +out_desc + " " +sample_io)
-    raw_text = raw_text.lower()
-    raw_text = re.sub(r"\s+", " ", raw_text).strip()
-    char_count = len(raw_text)
-    digit_count = len(re.findall(r"\d", raw_text))
+    patterns = [
+        r"sample input\s*\d*",
+        r"sample output\s*\d*",
+        r"input\s*\d*",
+        r"output\s*\d*",
+        r"example\s*\d*",
+    ]
+    for p in patterns:
+        sample_io= re.sub(p,"",sample_io)
+    sample_io = re.sub(r"\n+", "\n",sample_io)
+    sample_io= re.sub(r"\s+", " ",sample_io) 
+    raw_text=(desc + " " +inp_desc + " " +out_desc + " " +sample_io)
+    raw_text=raw_text.lower()
+    raw_text = re.sub(r"\n+", "\n", raw_text)
+    raw_text=re.sub(r"\s+", " ", raw_text).strip()
+    word_count=len(raw_text.split())
 
     return pd.DataFrame({
         "raw_text": [raw_text],
-        "char_count": [char_count],
-        "digit_count": [digit_count],
+        "word_count": [word_count],
         "description_empty": [1 if desc.strip() == "" else 0]
     })
 
 
 st.set_page_config(page_title="AutoJudge", layout="wide")
 st.title("AutoJudge – Problem Difficulty Predictor")
-st.markdown("Enter problem details to predict **difficulty class** or **difficulty score**.")
+st.divider()
+st.subheader("**Enter problem details to predict **difficulty class** or **difficulty score****.")
+st.divider()
 col1, col2 = st.columns(2)
 
 with col1:
@@ -41,7 +53,7 @@ colA, colB = st.columns(2)
 
 with colA:
     if st.button("Predict Problem Class"):
-        if not (desc.strip() or inp_desc.strip() or out_desc.strip() :
+        if not (desc.strip() or inp_desc.strip() or out_desc.strip() or sample_io.strp()):
             st.warning("Please enter at least one text field.")
             st.stop()
 
@@ -59,7 +71,7 @@ with colA:
 
 with colB:
     if st.button("Predict Problem Score"):
-        if not (desc.strip() or inp_desc.strip() or out_desc.strip() :
+        if not (desc.strip() or inp_desc.strip() or out_desc.strip() or sample_io.strip())  :
             st.warning("Please enter at least one text field.")
             st.stop()
 
