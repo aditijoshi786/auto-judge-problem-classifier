@@ -182,10 +182,29 @@ Below are the screenshots of accuracy metrics so obtained
 ## Running the Project Locally
 ```bash
 git clone https://github.com/aditijoshi786/auto-judge-problem-classifier
+```
+
+```bash
 cd auto-judge-problem-classifier
+```
+```bash
 python -m venv venv
+```
+
+**for windows**
+
+```bash
+venv\Scripts\activate
+```
+**for mac**
+```bash
 source venv/bin/activate
+```
+```bash
+
 pip install -r requirements.txt
+```
+```bash
 streamlit run app.py
 
 
