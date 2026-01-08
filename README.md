@@ -151,6 +151,10 @@ A **Streamlit web application** enables users to:
 - Paste a programming problem description
 - Receive predicted **Problem Class** and **Problem Score**
 
+
+  <img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/2606a24c-97c7-417d-9abc-258a86b9ae0b" />
+
+
 ---
 ## 📸 Screenshots
 
