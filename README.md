@@ -188,16 +188,22 @@ Below are the screenshots of accuracy metrics so obtained
 
 
 **Ridge Regression**
+
+
 <img width="365" height="134" alt="image" src="https://github.com/user-attachments/assets/94e314b9-4d6a-42af-86ae-28e1348b0086" />
 
 
 
 **Random Forest**
+
+
 <img width="376" height="109" alt="image" src="https://github.com/user-attachments/assets/bf3f68c7-ce4c-4a42-a1b6-776474acafd5" />
 
 
 
 **Gradient Boosting**
+
+
 <img width="335" height="121" alt="image" src="https://github.com/user-attachments/assets/8479f50f-7143-4525-88f6-019026637b78" />
 
 
@@ -229,7 +235,11 @@ pip install -r requirements.txt
 ```
 ```bash
 streamlit run app.py
+```
 
+## DEMO VIDEO
+
+https://drive.google.com/file/d/15KLi2WuiEnZ-IlR6Wt4G6Ko4SDRKxA5h/view?usp=sharing
 
 
 
