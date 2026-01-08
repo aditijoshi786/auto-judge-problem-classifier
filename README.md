@@ -163,25 +163,44 @@ I have not put screenshots of EDA here instead i have put them on my report
 Below are the screenshots of accuracy metrics so obtained
 
 **Logistic Regression**
+
+
 <img width="703" height="551" alt="image" src="https://github.com/user-attachments/assets/f685fdbc-a476-4191-8121-a5261d09120e" />
 
+
 **Linear SVMs**
+
+
 <img width="641" height="570" alt="image" src="https://github.com/user-attachments/assets/262de7ef-ccd5-4f94-8cdc-131558330f32" />
 
+
 **Random Forest**
+
+
 <img width="468" height="435" alt="image" src="https://github.com/user-attachments/assets/c983e5b5-9947-4a46-90fa-b7de5fa72960" />
 
+
 **Linear Regression**
+
+
 <img width="328" height="109" alt="image" src="https://github.com/user-attachments/assets/451b388d-18bf-41be-9711-f61f11efb445" />
+
+
 
 **Ridge Regression**
 <img width="365" height="134" alt="image" src="https://github.com/user-attachments/assets/94e314b9-4d6a-42af-86ae-28e1348b0086" />
 
+
+
 **Random Forest**
 <img width="376" height="109" alt="image" src="https://github.com/user-attachments/assets/bf3f68c7-ce4c-4a42-a1b6-776474acafd5" />
 
+
+
 **Gradient Boosting**
 <img width="335" height="121" alt="image" src="https://github.com/user-attachments/assets/8479f50f-7143-4525-88f6-019026637b78" />
+
+
 
 ## Running the Project Locally
 ```bash
